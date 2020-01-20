@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.crts.app.sme.main.model.EmiDeatilsDto;
+
+import com.crts.app.sme.main.dto.EmiDeatilsDto;
 import com.crts.app.sme.main.model.EmiDetails;
 import com.crts.app.sme.main.service.EmiDetailsServiceI;
 
@@ -15,13 +16,13 @@ import com.crts.app.sme.main.service.EmiDetailsServiceI;
 public class EmiDetailsController
 {  
 	@Autowired
-	private EmiDetailsServiceI hs;
+	private EmiDetailsServiceI eds;
 	
-	@PostMapping("/log")
+	@PostMapping("/reg")
 	public String savedata(@RequestBody EmiDetails ed)
 	{
 		
-	   hs.saveData(ed);
+	   eds.saveData(ed);
 	   
 	return "Save Successlly";
 	}
@@ -29,7 +30,7 @@ public class EmiDetailsController
 	public List<EmiDetails> getData()
 	{
 		
-	List<EmiDetails> ed=hs.getData();
+	List<EmiDetails> ed=eds.getData();
 		return ed;
 		
 	}
@@ -37,7 +38,7 @@ public class EmiDetailsController
 	@RequestMapping("/regdto")
 	public String saveEmiDto(@RequestBody EmiDeatilsDto emidto)
 	{
-		hs.saveEmiDto(emidto);
+		eds.saveEmiDto(emidto);
 		
 		return "Dto Save successfully";		
 		
@@ -45,7 +46,7 @@ public class EmiDetailsController
 	@RequestMapping("/getbydto")
 	public List<EmiDeatilsDto> getemidto()
 	{
-	List<EmiDeatilsDto> list=hs.getEmiDto();
+	List<EmiDeatilsDto> list=eds.getEmiDto();
 		return list;
 		
 		

@@ -7,7 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.crts.app.sme.main.model.EmiDeatilsDto;
+import com.crts.app.sme.main.dto.EmiDeatilsDto;
 import com.crts.app.sme.main.model.EmiDetails;
 import com.crts.app.sme.main.repository.EmiDetailsRepository;
 import com.crts.app.sme.main.service.EmiDetailsServiceI;

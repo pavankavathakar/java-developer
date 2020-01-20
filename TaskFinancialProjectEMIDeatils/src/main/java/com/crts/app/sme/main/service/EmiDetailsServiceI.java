@@ -2,7 +2,7 @@ package com.crts.app.sme.main.service;
 
 import java.util.List;
 
-import com.crts.app.sme.main.model.EmiDeatilsDto;
+import com.crts.app.sme.main.dto.EmiDeatilsDto;
 import com.crts.app.sme.main.model.EmiDetails;
 
 
